@@ -1,0 +1,11 @@
+[  
+    { "tag" : "json"   , "url": "config/app.json"                }, 
+    { "tag" : "script" , "url": "sys/core/vendor/mobile_detect.js"      },   
+    { "tag" : "link"   , "url": "ui/css/font_awesome.min.css"   },  
+    { "tag" : "link"   , "url": "sys/core/vendor/webix/webix.css" },     
+    { "tag" : "script" , "url": "sys/core/vendor/webix/webix.js"  },  
+    { "tag" : "script" , "url": "sys/core/helper.js"       }, 
+    { "tag" : "script" , "url": "sys/core/noback.js"       },
+    { "tag" : "script" , "url": "sys/core/mobile.js"       },          
+    { "tag" : "script" , "url": "app/main.js"              }  
+]
