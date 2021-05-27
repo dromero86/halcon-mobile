@@ -2,7 +2,7 @@
     @layout Main
     @type   Default  
 */
-app.define("app.layout.main",function()
+app.define("sdk.app.layout.main",function()
 {   
     document.body.innerHTML = "";
     document.body.removeAttribute("style"); 
@@ -69,9 +69,9 @@ app.define("app.layout.main",function()
                     autoheight: true,
                     data      :
                     [ 
-                        { id: "app.layout.home"             , name:"Inicio"        , icon: " fa fa-home"       }, 
-                        { id: "app.layout.datos_personales" , name:"Mis Datos"     , icon: " fa fa-user"       }, 
-                        { id: "sys.widget.logout"           , name:"Cerrar sesión" , icon: " fa fa-power-off"  } 
+                        { id: "sdk.app.layout.home"             , name:"Inicio"        , icon: " fa fa-home"       }, 
+                        { id: "sdk.app.layout.datos_personales" , name:"Mis Datos"     , icon: " fa fa-user"       }, 
+                        { id: "sdk.sys.widget.logout"           , name:"Cerrar sesión" , icon: " fa fa-power-off"  } 
                     ],
                     on        :
                     {

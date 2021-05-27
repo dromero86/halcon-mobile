@@ -1,21 +1,21 @@
 {
-	"name"    : "Urgara",
-    "short"   : "UR"    ,
-	"jsonp"   : true    ,
-	"domain"  : "https://cc0df8eef15f71a925ddcc8fe941dcec5622bb25.urgara.org.ar/urgara/server/",
-    "preview" : ""      ,    
+	"name"    : ""  ,
+    "short"   : ""  ,
+	"jsonp"   : true,
+	"domain"  : ""  ,
+    "preview" : ""  ,    
     "log"     : true, 
     "session" :
     {
         "enable"       : true                   ,
-        "login"        : "worker-auth"          ,
-        "check"        : "worker-check"         ,
-        "logout"       : "worker-logout"        ,
-        "activity"     : "worker-activity"      ,
-        "recover_start": "worker-recover-start" ,
-        "recover_end"  : "worker-recover-end"   ,
-        "key"          : "urgara.mobile.session",
-        "hash"         : "urgara.mobile.hash"   ,
+        "login"        : "worker.auth"          ,
+        "check"        : "worker.check"         ,
+        "logout"       : "worker.logout"        ,
+        "activity"     : "worker.activity"      ,
+        "recover_start": "worker.recover.start" ,
+        "recover_end"  : "worker.recover.end"   ,
+        "key"          : "mobile.session",
+        "hash"         : "mobile.hash"   ,
         "delay"        : 60000
     } 
 

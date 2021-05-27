@@ -1,4 +1,4 @@
-app.define("sys.widget.logout",function()  
+app.define("sdk.sys.widget.logout",function()  
 {   
     webix.ui
     ({
