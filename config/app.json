@@ -7,7 +7,7 @@
     "log"     : true, 
     "session" :
     {
-        "enable"       : true                   ,
+        "enable"       : false                   ,
         "login"        : "worker.auth"          ,
         "check"        : "worker.check"         ,
         "logout"       : "worker.logout"        ,

@@ -2,91 +2,66 @@
     @layout Main
     @type   Default  
 */
-app.define("sdk.app.layout.main",function()
+app.define("app.layout.main",function()
 {   
     document.body.innerHTML = "";
     document.body.removeAttribute("style"); 
 
     webix.ui
-    ({  
-        id    : "main" , 
+    ({   
         rows:
         [
-            { 
-                id         : "header", 
-                view       : "mdl_toolbar" ,       
+            {  
+                view       : "toolbar" ,       
                 elements   :
                 [  
-                    { 
-                        id    : "top-menu:left", 
-                        view  : "mdl_icon" , 
-                        icon  : "fa fa-home" , 
-                        width : 56  
+                    {  
+                        view  : "label" , 
+                        label : "WhatsApp"  
                     }, 
-                    { 
-                        view     : "mdl_toolbar_image" , 
-                        template : "<img src='./ui/img/logo-rounded-simple.svg' />"  
+                    { },
+                    {  
+                        view  : "icon"  , 
+                        icon  : "fas fa-search" , 
+                        width : 45  
                     },  
-                    { 
-                        id    : "top-menu:right",
-                        view  : "mdl_icon_rounded"  , 
-                        icon  : "fa fa-user" , 
-                        width : 56 , 
-                        popup : "popup_user_options" 
-                    } 
+                    {  
+                        view  : "icon"  , 
+                        icon  : "fas fa-ellipsis-v" , 
+                        width : 45  
+                    }
                 ] 
-            },
-            { 
-                id    : "content"  
-            } 
+            }, 
+            {  
+                id    : "content",   
+                rows:
+                [
+                    {
+                        view       : "tabbar"   ,  
+                        value      : "listView" , 
+                        optionWidth: 90        , 
+                        multiview  : true       , 
+                        options    : 
+                        [
+                            { id: "listView"   , value: "<span class='webix_icon fas fa-camera'></span>", width:40  },
+                            { id: "formView"   , value: "CHATS"    },
+                            { id: "emptyView"  , value: "ESTADOS"  },
+                            { id: "lamadaView" , value: "LLAMADAS" }
+                        ]
+                    },    
+                    {   
+                        id   : "mymultiview",
+                        cells:
+                        [
+                            { id: "listView"  , template: "Form Content"},                       
+                            { id: "formView"  , template: "<i>Info about the Form</i>"},        
+                            { id: "emptyView" , template: "empty Content"},                         
+                            { id: "lamadaView", template: "<i>Info about the llamada</i>"}
+                        ]
+                    }
+                ]
+            }
         ]
 
-    });
- 
-    webix.ui
-    ({ 
-        id        : "popup_user_options",
-        css       : "mo-window",
-        view      : "popup",  
-        width     : 170,
-        borderless: true,
-        margin    : 0,
-        padding   : 0,
-        body      :
-        {
-            css: "mo-modal",
-            rows:
-            [ 
-                {
-                    css       : "mo-list",
-                    view      : "list", 
-                    borderless: true,
-                    margin    : 0,
-                    padding   : 0,
-                    type      : { height:40  },
-                    template  : "<span class='webix_icon fa-#icon#'></span> #name#", 
-                    select    : true,
-                    autoheight: true,
-                    data      :
-                    [ 
-                        { id: "sdk.app.layout.home"             , name:"Inicio"        , icon: " fa fa-home"       }, 
-                        { id: "sdk.app.layout.datos_personales" , name:"Mis Datos"     , icon: " fa fa-user"       }, 
-                        { id: "sdk.sys.widget.logout"           , name:"Cerrar sesión" , icon: " fa fa-power-off"  } 
-                    ],
-                    on        :
-                    {
-                        onItemClick: function(id)
-                        { 
-                            if( __.isNumber(id)) return; 
-
-                            $$("popup_user_options").hide();
-
-                            app.require( this.getItem(id).id );
-                        } 
-                    }                       
-                }
-            ]         
-        }
     }); 
- 
 });

@@ -1,11 +1,13 @@
 [  
-    { "tag" : "json"   , "url": "sdk/config/app.json"             }, 
-    { "tag" : "script" , "url": "sdk/sys/vendor/mobile_detect.js" },   
-    { "tag" : "link"   , "url": "sdk/ui/css/font_awesome.min.css" },  
-    { "tag" : "link"   , "url": "sdk/sys/vendor/webix/webix.css"  },     
-    { "tag" : "script" , "url": "sdk/sys/vendor/webix/webix.js"   },  
-    { "tag" : "script" , "url": "sdk/sys/core/helper.js"          }, 
-    { "tag" : "script" , "url": "sdk/sys/core/noback.js"          },
-    { "tag" : "script" , "url": "sdk/sys/core/mobile.js"          },          
-    { "tag" : "script" , "url": "sdk/app/main.js"                 }  
+    { "tag" : "json"   , "url": "config/app.json"                   }, 
+    { "tag" : "script" , "url": "sys/vendor/mobile_detect.js"       },   
+    { "tag" : "link"   , "url": "sys/vendor/webix/webix_8.3.1.css"  },    
+    { "tag" : "link"   , "url": "ui/css/fontawesome-free-web/css/all.min.css"       },   
+    { "tag" : "script" , "url": "sys/vendor/webix/webix_8.3.1.js"   },  
+    { "tag" : "script" , "url": "sys/core/helper.js"                }, 
+    { "tag" : "script" , "url": "sys/core/noback.js"                },
+    { "tag" : "script" , "url": "sys/core/mobile.js"                }, 
+    { "tag" : "script" , "url": "sys/core/mobile.js"                },  
+    { "tag" : "script" , "url": "sys/plugins/material.js"           },          
+    { "tag" : "script" , "url": "app/main.js"                       }  
 ]

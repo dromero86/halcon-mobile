@@ -1,8 +1,8 @@
-app.define("sdk.sys.widget.login",function()
+app.define("sys.widget.login",function()
 {
     try{ $$("_login").close(); }catch(ex){ }
 
-    __.changeUri("sdk.sys.widget.login");  
+    __.changeUri("sys.widget.login");  
     __.setTitle("Bienvenido");
 
     var onSubmit = function(event)

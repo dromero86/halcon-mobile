@@ -1,9 +1,9 @@
-app.define("sdk.sys.core.session",function()  
+app.define("sys.core.session",function()  
 {   
     var session = 
     {
         isOnline        : false,
-        module          : 'sdk.app.layout.login',
+        module          : 'app.layout.login',
         callAfterCheck  : true,
         postCallback    : function(o){ },
 
@@ -12,8 +12,8 @@ app.define("sdk.sys.core.session",function()
             url_check    : usr.session.check  , 
             sess_key     : usr.session.key    ,
             sess_hash    : usr.session.hash   ,
-            module_denied: 'sdk.app.layout.login' ,
-            module_pass  : "sdk.app.layout.main" 
+            module_denied: 'app.layout.login' ,
+            module_pass  : "app.layout.main" 
         },
 
         set_hash: function(token)
@@ -108,7 +108,7 @@ app.define("sdk.sys.core.session",function()
                 else
                 { 
                     try{ $$("_recover_start").close(); }catch(ex){ }
-                    app.require("sdk.sys.widget.recover_end"); 
+                    app.require("sys.widget.recover_end"); 
                 }
             },
             recover_end: function( response ){
@@ -120,7 +120,7 @@ app.define("sdk.sys.core.session",function()
                 else
                 { 
                     try{ $$("_recover_end").close(); }catch(ex){ }
-                    app.require("sdk.sys.widget.login"); 
+                    app.require("sys.widget.login"); 
                 }
             }
         } 
